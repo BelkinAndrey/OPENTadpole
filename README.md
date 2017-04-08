@@ -7,3 +7,6 @@
 
 Симуляция среды, пока только вакуум:
 ![](https://github.com/BelkinAndrey/OPENTadpole/blob/master/Image/Screen2.gif)
+
+
+Сборка: https://drive.google.com/open?id=0B_oxPA29sHP5TXhqTE12TEh5MFE
