@@ -4,7 +4,7 @@
 Download for Windows: : https://drive.google.com/file/d/0B_oxPA29sHP5MjVnaTJsVFdTSmM/view?usp=sharing
 
 
-![](https://youtu.be/MDsP-KNN5AE)
+![https://youtu.be/MDsP-KNN5AE]
 
 
 Редактор коннектома головастика:
