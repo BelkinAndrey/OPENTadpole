@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{ABA2A6DB-15E6-CCE7-0509-F063290A8035}") = "OpenTadpole", "Assembly-CSharp.csproj", "{31FF134C-6998-2704-A7A2-EDA7BCADB0CE}"
+EndProject
+Project("{ABA2A6DB-15E6-CCE7-0509-F063290A8035}") = "OpenTadpole", "Assembly-CSharp-Editor.csproj", "{D0E3448E-9FD3-88EE-0453-429FAF77608F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31FF134C-6998-2704-A7A2-EDA7BCADB0CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31FF134C-6998-2704-A7A2-EDA7BCADB0CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31FF134C-6998-2704-A7A2-EDA7BCADB0CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31FF134C-6998-2704-A7A2-EDA7BCADB0CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0E3448E-9FD3-88EE-0453-429FAF77608F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0E3448E-9FD3-88EE-0453-429FAF77608F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0E3448E-9FD3-88EE-0453-429FAF77608F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0E3448E-9FD3-88EE-0453-429FAF77608F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
