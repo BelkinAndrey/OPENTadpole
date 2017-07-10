@@ -1,0 +1,122 @@
+<NetSave>
+  <Neurons>
+    <Neuron index="0" IDNeuron="1" Type="2" X="-150.136" Y="-301.9298" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="1" Dampfer="1" AnswerTime="100" ReposeTime="0" thresholdDown="-50" TimeReAction="400" />
+    <Neuron index="1" IDNeuron="2" Type="2" X="151.4971" Y="-308.7851" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="1" Dampfer="1" AnswerTime="100" ReposeTime="0" thresholdDown="-50" TimeReAction="400" />
+    <Neuron index="2" IDNeuron="3" Type="0" X="-114.514" Y="-479.8976" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="1" Dampfer="1" AnswerTime="0" ReposeTime="0" />
+    <Neuron index="3" IDNeuron="4" Type="0" X="126.8658" Y="-487.3938" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="1" Dampfer="1" AnswerTime="0" ReposeTime="0" />
+    <Neuron index="4" IDNeuron="5" Type="0" X="-227.6992" Y="-223.8998" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="1" Dampfer="1" AnswerTime="100" ReposeTime="0" />
+    <Neuron index="5" IDNeuron="6" Type="0" X="268.9264" Y="-519.918" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="1" Dampfer="1" AnswerTime="100" ReposeTime="0" />
+    <Neuron index="6" IDNeuron="7" Type="0" X="-95.521" Y="-1357.017" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="1" Dampfer="1" AnswerTime="0" ReposeTime="0" />
+    <Neuron index="7" IDNeuron="8" Type="0" X="104.9382" Y="-1353.459" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="1" Dampfer="1" AnswerTime="0" ReposeTime="0" />
+    <Neuron index="8" IDNeuron="9" Type="0" X="-87.21796" Y="-1699.814" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="1" Dampfer="1" AnswerTime="0" ReposeTime="0" />
+    <Neuron index="9" IDNeuron="10" Type="0" X="77.65675" Y="-1693.884" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="1" Dampfer="1" AnswerTime="0" ReposeTime="0" />
+    <Neuron index="10" IDNeuron="11" Type="0" X="-76.54261" Y="-1985.677" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="1" Dampfer="1" AnswerTime="0" ReposeTime="0" />
+    <Neuron index="11" IDNeuron="12" Type="0" X="77.65676" Y="-1982.118" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="1" Dampfer="1" AnswerTime="0" ReposeTime="0" />
+    <Neuron index="12" IDNeuron="13" Type="0" X="-61.12268" Y="-2283.4" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="1" Dampfer="1" AnswerTime="0" ReposeTime="0" />
+    <Neuron index="13" IDNeuron="14" Type="0" X="64.60912" Y="-2283.4" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="1" Dampfer="1" AnswerTime="0" ReposeTime="0" />
+    <Neuron index="14" IDNeuron="15" Type="0" X="-50.44734" Y="-2615.522" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="1" Dampfer="1" AnswerTime="0" ReposeTime="0" />
+    <Neuron index="15" IDNeuron="16" Type="0" X="56.30607" Y="-2615.522" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="1" Dampfer="1" AnswerTime="0" ReposeTime="0" />
+    <Neuron index="16" IDNeuron="17" Type="0" X="-39.772" Y="-2932.224" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="1" Dampfer="1" AnswerTime="0" ReposeTime="0" />
+    <Neuron index="17" IDNeuron="18" Type="0" X="44.44458" Y="-2928.666" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="1" Dampfer="1" AnswerTime="0" ReposeTime="0" />
+    <Neuron index="18" IDNeuron="19" Type="0" X="-27.91051" Y="-3258.415" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="1" Dampfer="1" AnswerTime="0" ReposeTime="0" />
+    <Neuron index="19" IDNeuron="20" Type="0" X="26.65235" Y="-3258.415" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="1" Dampfer="1" AnswerTime="0" ReposeTime="0" />
+    <Neuron index="20" IDNeuron="21" Type="0" X="-16.04902" Y="-3610.701" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="1" Dampfer="1" AnswerTime="0" ReposeTime="0" />
+    <Neuron index="21" IDNeuron="22" Type="0" X="19.53545" Y="-3607.143" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="1" Dampfer="1" AnswerTime="0" ReposeTime="0" />
+    <Neuron index="22" IDNeuron="23" Type="0" X="-79.99461" Y="-1150.168" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="1" Dampfer="1" AnswerTime="0" ReposeTime="0" />
+    <Neuron index="23" IDNeuron="24" Type="0" X="82.74491" Y="-1148.418" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="1" Dampfer="1" AnswerTime="0" ReposeTime="0" />
+    <Neuron index="24" IDNeuron="25" Type="1" X="-131.4715" Y="-1074.843" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="10" Dampfer="1" AnswerTime="0" ReposeTime="0" MaxModul="300" DampferM="0.01" EvaluationTime="2000" IterationLimit="5" thresholdUp="0" StartAdaptTime="5000" SpeedAdapt="2000" MinThreshold="10" />
+    <Neuron index="25" IDNeuron="26" Type="1" X="138.2616" Y="-1067.986" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="10" Dampfer="1" AnswerTime="0" ReposeTime="0" MaxModul="300" DampferM="0.01" EvaluationTime="2000" IterationLimit="5" thresholdUp="0" StartAdaptTime="5000" SpeedAdapt="2000" MinThreshold="10" />
+    <Neuron index="26" IDNeuron="27" Type="0" X="-197.8469" Y="-1024.58" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="1" Dampfer="1" AnswerTime="0" ReposeTime="200" />
+    <Neuron index="27" IDNeuron="28" Type="0" X="203.4691" Y="-1012.194" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="1" Dampfer="1" AnswerTime="0" ReposeTime="200" />
+    <Neuron index="28" IDNeuron="29" Type="0" X="0.6792908" Y="-154.3438" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="1" Dampfer="1" AnswerTime="0" ReposeTime="0" />
+    <Neuron index="29" IDNeuron="30" Type="0" X="-52.3296" Y="-126.5204" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="1" Dampfer="1" AnswerTime="0" ReposeTime="0" />
+    <Neuron index="30" IDNeuron="31" Type="0" X="-52.3296" Y="-181.6332" Layer="0" MaxSumm="10" MinSumm="-100" threshold="1" Dampfer="0.1" AnswerTime="0" ReposeTime="0" />
+    <Neuron index="31" IDNeuron="32" Type="0" X="62.30501" Y="-122.1114" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="1" Dampfer="1" AnswerTime="0" ReposeTime="0" />
+    <Neuron index="32" IDNeuron="34" Type="0" X="63.55457" Y="-186.3642" Layer="0" MaxSumm="10" MinSumm="-100" threshold="1" Dampfer="0.1" AnswerTime="0" ReposeTime="0" />
+    <Neuron index="33" IDNeuron="35" Type="0" X="0.6318359" Y="-224.1539" Layer="0" MaxSumm="300" MinSumm="-10000" threshold="1" Dampfer="1" AnswerTime="0" ReposeTime="1000" />
+    <Neuron index="34" IDNeuron="37" Type="0" X="7.889755" Y="-298.371" Layer="0" MaxSumm="300" MinSumm="-200" threshold="1" Dampfer="0.1" AnswerTime="0" ReposeTime="0" />
+    <Neuron index="35" IDNeuron="38" Type="0" X="63.51394" Y="-258.5067" Layer="0" MaxSumm="10" MinSumm="-100" threshold="1" Dampfer="0.1" AnswerTime="0" ReposeTime="0" />
+  </Neurons>
+  <Synapses>
+    <Synapse index="0" parentNeuron="4" targetNeuron="2" TypeSynapse="0" descriptor="0" Force="2" Delay="0" Freeze="False" />
+    <Synapse index="1" parentNeuron="5" targetNeuron="3" TypeSynapse="0" descriptor="0" Force="-100" Delay="0" Freeze="False" />
+    <Synapse index="2" parentNeuron="5" targetNeuron="2" TypeSynapse="0" descriptor="0" Force="-100" Delay="0" Freeze="False" />
+    <Synapse index="3" parentNeuron="2" targetNeuron="1" TypeSynapse="0" descriptor="0" Force="-51" Delay="0" Freeze="False" />
+    <Synapse index="4" parentNeuron="3" targetNeuron="0" TypeSynapse="0" descriptor="0" Force="-51" Delay="0" Freeze="False" />
+    <Synapse index="5" parentNeuron="0" targetNeuron="2" TypeSynapse="0" descriptor="0" Force="2" Delay="0" Freeze="False" />
+    <Synapse index="6" parentNeuron="1" targetNeuron="3" TypeSynapse="0" descriptor="0" Force="2" Delay="0" Freeze="False" />
+    <Synapse index="7" parentNeuron="22" targetNeuron="6" TypeSynapse="2" descriptor="0" Force="0" Delay="100" Freeze="False" />
+    <Synapse index="8" parentNeuron="22" targetNeuron="8" TypeSynapse="2" descriptor="0" Force="0" Delay="200" Freeze="False" />
+    <Synapse index="9" parentNeuron="22" targetNeuron="10" TypeSynapse="2" descriptor="0" Force="0" Delay="300" Freeze="False" />
+    <Synapse index="10" parentNeuron="22" targetNeuron="12" TypeSynapse="2" descriptor="0" Force="0" Delay="400" Freeze="False" />
+    <Synapse index="11" parentNeuron="22" targetNeuron="14" TypeSynapse="2" descriptor="0" Force="0" Delay="500" Freeze="False" />
+    <Synapse index="12" parentNeuron="22" targetNeuron="16" TypeSynapse="2" descriptor="0" Force="0" Delay="600" Freeze="False" />
+    <Synapse index="13" parentNeuron="22" targetNeuron="18" TypeSynapse="2" descriptor="0" Force="0" Delay="700" Freeze="False" />
+    <Synapse index="14" parentNeuron="22" targetNeuron="20" TypeSynapse="2" descriptor="0" Force="0" Delay="800" Freeze="False" />
+    <Synapse index="15" parentNeuron="23" targetNeuron="7" TypeSynapse="2" descriptor="0" Force="0" Delay="100" Freeze="False" />
+    <Synapse index="16" parentNeuron="23" targetNeuron="9" TypeSynapse="2" descriptor="0" Force="0" Delay="200" Freeze="False" />
+    <Synapse index="17" parentNeuron="23" targetNeuron="11" TypeSynapse="2" descriptor="0" Force="0" Delay="300" Freeze="False" />
+    <Synapse index="18" parentNeuron="23" targetNeuron="13" TypeSynapse="2" descriptor="0" Force="0" Delay="400" Freeze="False" />
+    <Synapse index="19" parentNeuron="23" targetNeuron="15" TypeSynapse="2" descriptor="0" Force="0" Delay="500" Freeze="False" />
+    <Synapse index="20" parentNeuron="23" targetNeuron="17" TypeSynapse="2" descriptor="0" Force="0" Delay="600" Freeze="False" />
+    <Synapse index="21" parentNeuron="23" targetNeuron="19" TypeSynapse="2" descriptor="0" Force="0" Delay="700" Freeze="False" />
+    <Synapse index="22" parentNeuron="23" targetNeuron="21" TypeSynapse="2" descriptor="0" Force="0" Delay="800" Freeze="False" />
+    <Synapse index="23" parentNeuron="24" targetNeuron="22" TypeSynapse="2" descriptor="0" Force="0" Delay="0" Freeze="False" />
+    <Synapse index="24" parentNeuron="25" targetNeuron="23" TypeSynapse="2" descriptor="0" Force="0" Delay="0" Freeze="False" />
+    <Synapse index="25" parentNeuron="0" targetNeuron="24" TypeSynapse="0" descriptor="0" Force="11" Delay="0" Freeze="False" />
+    <Synapse index="26" parentNeuron="1" targetNeuron="25" TypeSynapse="0" descriptor="0" Force="11" Delay="0" Freeze="False" />
+    <Synapse index="27" parentNeuron="26" targetNeuron="24" TypeSynapse="1" descriptor="0" Force="-8" Delay="0" Freeze="False" />
+    <Synapse index="28" parentNeuron="27" targetNeuron="25" TypeSynapse="1" descriptor="0" Force="-8" Delay="0" Freeze="False" />
+    <Synapse index="29" parentNeuron="28" targetNeuron="29" TypeSynapse="2" descriptor="0" Force="0" Delay="100" Freeze="False" />
+    <Synapse index="30" parentNeuron="28" targetNeuron="30" TypeSynapse="0" descriptor="0" Force="2" Delay="0" Freeze="False" />
+    <Synapse index="31" parentNeuron="28" targetNeuron="31" TypeSynapse="2" descriptor="0" Force="0" Delay="0" Freeze="False" />
+    <Synapse index="32" parentNeuron="28" targetNeuron="32" TypeSynapse="0" descriptor="0" Force="2" Delay="1500" Freeze="False" />
+    <Synapse index="33" parentNeuron="29" targetNeuron="30" TypeSynapse="0" descriptor="0" Force="-100" Delay="0" Freeze="False" />
+    <Synapse index="34" parentNeuron="31" targetNeuron="32" TypeSynapse="0" descriptor="0" Force="-100" Delay="0" Freeze="False" />
+    <Synapse index="35" parentNeuron="30" targetNeuron="33" TypeSynapse="2" descriptor="0" Force="0" Delay="0" Freeze="False" />
+    <Synapse index="36" parentNeuron="32" targetNeuron="33" TypeSynapse="2" descriptor="0" Force="0" Delay="0" Freeze="False" />
+    <Synapse index="37" parentNeuron="2" targetNeuron="34" TypeSynapse="0" descriptor="0" Force="-100" Delay="0" Freeze="False" />
+    <Synapse index="38" parentNeuron="3" targetNeuron="34" TypeSynapse="0" descriptor="0" Force="-100" Delay="0" Freeze="False" />
+    <Synapse index="39" parentNeuron="33" targetNeuron="34" TypeSynapse="0" descriptor="0" Force="2" Delay="0" Freeze="False" />
+    <Synapse index="40" parentNeuron="33" targetNeuron="35" TypeSynapse="0" descriptor="0" Force="2" Delay="0" Freeze="False" />
+    <Synapse index="41" parentNeuron="34" targetNeuron="4" TypeSynapse="2" descriptor="0" Force="0" Delay="0" Freeze="False" />
+    <Synapse index="42" parentNeuron="34" targetNeuron="35" TypeSynapse="0" descriptor="0" Force="-100" Delay="0" Freeze="False" />
+    <Synapse index="43" parentNeuron="35" targetNeuron="5" TypeSynapse="0" descriptor="0" Force="50" Delay="0" Freeze="False" />
+  </Synapses>
+  <RS target="-1" />
+  <RSL_1 target="-1" />
+  <RSL_2 target="-1" />
+  <RSL_3 target="-1" />
+  <RSL_4 target="-1" />
+  <RSL_5 target="-1" />
+  <RSR_1 target="-1" />
+  <RSR_2 target="-1" />
+  <RSR_3 target="-1" />
+  <RSR_4 target="-1" />
+  <RSR_5 target="-1" />
+  <ML_1 target="6" />
+  <ML_2 target="8" />
+  <ML_3 target="10" />
+  <ML_4 target="12" />
+  <ML_5 target="14" />
+  <ML_6 target="16" />
+  <ML_7 target="18" />
+  <ML_8 target="20" />
+  <MR_1 target="7" />
+  <MR_2 target="9" />
+  <MR_3 target="11" />
+  <MR_4 target="13" />
+  <MR_5 target="15" />
+  <MR_6 target="17" />
+  <MR_7 target="19" />
+  <MR_8 target="21" />
+  <F1 target="4" />
+  <F2 target="5" />
+  <F3 target="26" />
+  <F4 target="27" />
+  <EYE target="28" />
+  <Hunger target="-1" />
+  <Power target="-1" />
+  <FlairL target="-1" />
+  <FlairR target="-1" />
+</NetSave>
