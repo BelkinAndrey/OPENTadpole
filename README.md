@@ -1,6 +1,7 @@
 ![](https://github.com/BelkinAndrey/OPENTadpole/blob/master/Image/logo.jpg)
 # OPENTadpole
-В разработке
+
+Download for Windows: : https://drive.google.com/file/d/0B_oxPA29sHP5MjVnaTJsVFdTSmM/view?usp=sharing
 
 Редактор коннектома головастика:
 ![](https://github.com/BelkinAndrey/OPENTadpole/blob/master/Image/Screen1.gif)
@@ -12,4 +13,5 @@
 ![](https://github.com/BelkinAndrey/OPENTadpole/blob/master/Image/Screen6.gif)
 
 
-Сборка: https://drive.google.com/open?id=0B_oxPA29sHP5TXhqTE12TEh5MFE
+
+
