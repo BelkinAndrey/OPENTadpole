@@ -1,10 +1,11 @@
 ![](https://github.com/BelkinAndrey/OPENTadpole/blob/master/Image/logo.jpg)
 # OPENTadpole
 
-Download for Windows: : https://drive.google.com/file/d/0B_oxPA29sHP5MjVnaTJsVFdTSmM/view?usp=sharing
+Download for Windows: https://drive.google.com/file/d/0B_oxPA29sHP5MjVnaTJsVFdTSmM/view?usp=sharing
 
+Source:  https://drive.google.com/file/d/0B_oxPA29sHP5S08tczUzVzc1Ujg/view?usp=sharing
 
-https://youtu.be/MDsP-KNN5AE
+Video: https://youtu.be/MDsP-KNN5AE
 
 
 Редактор коннектома головастика:
@@ -15,7 +16,3 @@ https://youtu.be/MDsP-KNN5AE
 
 Симуляция среды:
 ![](https://github.com/BelkinAndrey/OPENTadpole/blob/master/Image/Screen6.gif)
-
-
-
-
