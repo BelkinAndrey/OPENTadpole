@@ -6,11 +6,11 @@ Download for Windows: https://drive.google.com/file/d/0B_oxPA29sHP5MjVnaTJsVFdTS
 Video: https://youtu.be/MDsP-KNN5AE
 
 
-Редактор коннектома головастика:
+Tadpole Connectom Editor:
 ![](https://github.com/BelkinAndrey/OPENTadpole/blob/master/Image/Screen1.gif)
 
-Головастик в вакууме:
+Tadpole in vacuum:
 ![](https://github.com/BelkinAndrey/OPENTadpole/blob/master/Image/Screen3.gif)
 
-Симуляция среды:
+Emulating the environment:
 ![](https://github.com/BelkinAndrey/OPENTadpole/blob/master/Image/Screen6.gif)
