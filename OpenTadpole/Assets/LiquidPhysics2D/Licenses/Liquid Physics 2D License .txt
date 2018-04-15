@@ -1,0 +1,7 @@
+Copyright © Physical Liquid Ltd. 2013-2014. All rights reserved.
+
+The Use of this Unity3D asset and any software created by Physical Liquid Software (Physical Liquid Ltd.) is subject to the standard Unity Asset Store End User License Agreement viewable at the following link (https://unity3d.com/legal) . This asset contains open source software created by third parties and is therefore governed by their respective licences which are included with this Unity 3D asset.
+
+
+
+
