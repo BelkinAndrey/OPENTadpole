@@ -3,8 +3,6 @@
 
 Download for Windows: https://drive.google.com/file/d/0B_oxPA29sHP5MjVnaTJsVFdTSmM/view?usp=sharing
 
-Source:  https://drive.google.com/file/d/0B_oxPA29sHP5S08tczUzVzc1Ujg/view?usp=sharing
-
 Video: https://youtu.be/MDsP-KNN5AE
 
 
