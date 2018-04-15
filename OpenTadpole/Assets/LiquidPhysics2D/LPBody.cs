@@ -1,0 +1,210 @@
+using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using System;
+using System.Runtime.InteropServices;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
+/// <summary>Represents a b2Body object in the liquidfun simulation world</summary>
+public class LPBody : LPThing 
+{	
+	[Tooltip("What kind of body is this. Static = cant move. Dynamic = can move. Kinematic = not affected by gravity or collisons")]
+	public LPBodyTypes BodyType = LPBodyTypes.Static;
+	[Tooltip("how much linear velocity this body will lose over time")]
+	public float LinearDamping = 0.1f;
+	[Tooltip("how much angular velocity this body will lose over time")]
+	public float AngularDamping = 0.1f;
+	[Tooltip("Can this body sleep? Recommended, improves performance")]
+	public bool AllowSleep = true;
+	[Tooltip("Can this body not rotate?")]
+	public bool FixedRotation = false;
+	[Tooltip("Is this body a bullet? Bullets are simulated more accurately(and will not pass thorugh other objects when they are going fast), but more expensively")]
+	public bool IsBullet  = false;
+	[Tooltip("Scale of gravity in relation to this object. Eg minus value will make this fall 'upwards'")]
+	public float GravityScale = 1f;
+	[Tooltip("Should this body be created when the game plays")]	
+	public bool SpawnOnPlay = true;
+	/// <summary>key of this body in the LPManager dictionary allBodies
+	/// and its userdata value in the simulation</summary>	
+	public int myIndex {get; private set;}
+	public bool Initialised = false;
+	private LPManager lpman;
+	private float StartRotation;
+	private float diff = 0f;
+
+	/// All the references to LPFixtures associated with this body are stored here
+	/// I use a dictionary so each key is unique
+	public Dictionary<int,LPFixture> myFixtures = new Dictionary<int, LPFixture>();
+	private int fixturesIndex = 0;
+	
+	/// <summary>Add a fixture to this bodies list of fixtures
+	///Note: this is normally called from the fixtures Initialise method</summary>	
+	public int AddFixture(LPFixture fixture)
+	{
+		myFixtures.Add(fixturesIndex,fixture);
+		fixturesIndex++;
+		return fixturesIndex -1;
+	}
+	
+	/// <summary>Remove a fixture from this bodies list of fixtures
+	///Note: this is normally called from the fixtures delete method</summary>	
+	public void RemoveFixture(int index)
+    {
+		myFixtures.Remove(index);
+    }
+	
+	public float GetDiff()
+	{
+		return diff;
+	}
+	
+	#if UNITY_EDITOR
+	void Start ()
+	{
+		if(GameObject.FindObjectOfType<LPManager>() == null)
+		{
+			Debug.LogError("There is no LPManager. You must have one in your scene for Liquid Physics 2D to work");
+		}	
+	}
+	#endif
+	
+	//This creates the body and its fixtures in the physics simulation
+	public void Initialise(LPManager man)
+	{
+		StartRotation = transform.localEulerAngles.z;
+		lpman = man;
+
+        myIndex = lpman.AddBody(this);                  
+		ThingPtr = LPAPIBody.CreateBody(lpman.GetPtr(),(int)BodyType,transform.position.x,transform.position.y
+										  ,0f
+		                                  ,LinearDamping,AngularDamping,AllowSleep,FixedRotation,IsBullet,GravityScale
+		                                  ,myIndex);
+
+		
+		foreach (LPFixture _fix in gameObject.GetComponents<LPFixture>())
+		{
+			_fix.Initialise(this);
+		}
+		Initialised = true;
+	}
+	
+	/// <summary>Returns whether this body needs to be updated or not</summary>
+	public bool shouldUpdate()
+	{
+		if (gameObject.activeSelf && Initialised && BodyType != LPBodyTypes.Static)
+		{
+			return true;
+		}
+		return false;
+	}
+	
+	/// <summary> This is called from the LPManager compoonent during the Update event handler call
+	/// It updates the position and rotation of the gameobject of which this body is a component
+	/// All the bodies info is fetched simultaneously to reduce calls to the native library and improve performance on iOS</summary>
+	public void LPmanUpdate(float x,float y,float ang)
+	{
+		transform.position = new Vector3(x,y,transform.position.z);
+		diff = Mathf.Rad2Deg*ang;
+		transform.localEulerAngles = new Vector3(0f,0f,diff+StartRotation);
+	}
+	
+	/// <summary> Determines what colour to draw the bodies fixtures based on its state / type  </summary>
+	public Color GetColor()
+	{    
+		if (BodyType == LPBodyTypes.Static) 
+		{
+			if (Initialised && Application.isPlaying) 
+			{
+				if (!LPAPIBody.GetBodyActive(ThingPtr)) 
+				{
+					return LPColors.StaticInactive;
+				}
+				if (!LPAPIBody.GetBodyAwake(ThingPtr)) 
+				{
+                    return LPColors.StaticAsleep;
+                }	  
+            }	
+			return LPColors.StaticAwake;	
+		}
+		if (BodyType == LPBodyTypes.Dynamic)
+		{
+			if (Initialised && Application.isPlaying) 
+			{
+				if (!LPAPIBody.GetBodyActive(ThingPtr)) 
+				{
+					return LPColors.DynamicInActive;
+				}
+				if (!LPAPIBody.GetBodyAwake(ThingPtr)) 
+				{
+                    return LPColors.DynamicAsleep;
+                }	 
+            }
+			return LPColors.DynamicAwake;
+		}
+		if (BodyType == LPBodyTypes.Kinematic)
+		{
+			if (Initialised && Application.isPlaying) 
+			{
+				if (!LPAPIBody.GetBodyActive(ThingPtr)) 
+				{
+					return LPColors.KinematicInActive;
+				}
+				if (!LPAPIBody.GetBodyAwake(ThingPtr)) 
+                {
+                    return LPColors.KinematicAsleep;
+                }	
+			}
+			return LPColors.KinematicAwake;
+		}
+		return  Color.white;		
+	}
+	
+	/// <summary>
+	/// Returns an array of the indices of every body currently in contact with this body
+	/// Note that the 1st element of the array is the lenght of the array</summary>
+	public int[] GetContacts()
+	{
+		IntPtr contactsPointer = LPAPIBody.GetBodyContacts(ThingPtr); 
+		
+		int[] contactsArray = new int[1];
+		Marshal.Copy (contactsPointer,contactsArray,0,1);
+		int contsNum = contactsArray[0];
+		
+		int[] contacts = new int[contsNum+1];
+        if (contsNum > 0) 
+		{		
+            Marshal.Copy(contactsPointer, contacts, 0, contsNum+1);		
+        }	
+        
+        // LPAPIUtility.ReleaseIntArray(contactsPointer);	
+		return contacts;
+    }
+	
+	//Delete the body (and its fixtures) from the physics simulation, also destroy the gameobject in unity. 
+	public override void Delete()
+	{
+		lpman.RemoveBody(myIndex);
+		LPAPIBody.DeleteBody(lpman.GetPtr(),ThingPtr);
+		Destroy(gameObject);	
+	}
+
+    //Delete the body (and its fixtures) from the physics simulation
+    public void DeleteWithoutRemovingGameObject()
+    {
+        lpman.RemoveBody(myIndex);
+        LPAPIBody.DeleteBody(lpman.GetPtr(), ThingPtr);
+        foreach (LPFixture f in GetComponents<LPFixture>())
+        {
+            Destroy(f);
+        }
+        Destroy(GetComponent<LPBody>());
+    }
+
+    public void DeleteWithoutRemovingComponents()
+    {
+        lpman.RemoveBody(myIndex);
+        LPAPIBody.DeleteBody(lpman.GetPtr(), ThingPtr);
+    }
+}
