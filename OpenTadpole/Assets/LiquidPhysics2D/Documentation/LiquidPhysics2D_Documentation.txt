@@ -1,0 +1,284 @@
+-------------------------------------------------------------------------------
+================================================
+Liquid Physics 2D  - Version 1.1 - Released 17-11-2014
+================================================
+-------------------------------------------------------------------------------
+
+
+========================
+ 1. Resources
+========================
+
+This text file is *not* considered the primary source of documentation for this asset.
+It is really more of a reference document for the *real* sources.
+We highly recommend that you review the following sources of support / information.
+
+------------
+1.1 Our series of video tutorials about how to use Liquid Physics 2D.
+------------
+	Find them on the Physical Liquid Software youtube channel at this address...
+
+	https://www.youtube.com/channel/UCPGXG8kuKn9Uf0JdtvAkc9w
+	
+	We strongly advise you to watch all these videos. We recommend these tutorial videos 
+	being your first port of call after you buy Liquid Physics 2D.
+
+------------
+1.2  The example scenes.
+------------
+	After you import the asset they will be in the folder..  Assets\LiquidPhysics2D\ExampleScenes
+
+	These should be very useful in showing how various things are implemented in Liquid Physics 2d.
+	They show what sort of things are possible and you should find techniques and examples that
+	you may want to use to make your games.
+
+------------	
+1.3  Tooltips.
+------------
+	All the Liquid Physics 2D monobehavior derived components have tooltips on all their public fields.
+	You will notice these components also all have the prefix 'LP' for example, LPBody, LPManager, etc.
+	In the inspector panel in the Unity editor hover your mouse over a field you wish to know more about 
+	and a brief explanation of it will appear.
+
+------------	
+1.4  Code comments.
+------------
+	The code for all Liquid Physics 2D classes is fully commented. Classes, fields and functions
+	have XML commenting. You can read this directly by looking at the source code or as they are 
+	XML comments they should show up as hints in your IDE of choice. 
+
+------------	
+1.5  Forums.
+------------
+	We have set up a dedicated forum for the Liquid Physics 2D Unity asset. It is at this address...
+	
+	http://physicalliquid.com/forum/
+	
+	The main purposes of this forum are...
+	Report any bugs or issues encountered.
+	Request new features.
+	Help and support with using Liquid Physics 2D
+	
+------------	
+1.6  Liquidfun and Box2D documentation.
+------------	
+	This asset is essentially a plugin for Unity for an existing C++ library called Liquidfun.
+	Liquidfun is itself a superset of Box2D, a very popular 2D physics engine library.
+	
+	Liquidfun main page...  http://google.github.io/liquidfun/
+	Liquidfun programmers guide...  http://google.github.io/liquidfun/Programmers-Guide/html/index.html
+	Liquidfun API reference...  http://google.github.io/liquidfun/API-Ref/html/annotated.html
+	
+	Box2D tutorials...   http://www.iforce2d.net/b2dtut/
+	
+	You may find the documentation for these libraries very helpful, especially for learning 
+	general techniques for how to use this physics engine to build the gameplay you want.
+	
+	Also you may find functions or functionality in Liquidfun that you want to use in your game which you 
+	do not think are sufficiently exposed in this asset. In that case visit the 'request features' section of the 
+	Liquid Physics 2D forum and request this to be exposed, this asset is being actively developed and
+	supported and we welcome suggestions. 
+
+
+
+========================
+ 2. Hotkeys
+========================
+
+There are some hotkeys involved in editing polygon shapes and chainshapes
+
+First select the shape you want to edit.
+
+To move a vertex, hold down shift and drag a vertex to its new position.
+To delete a vertex, hold down control and click on the vertex you wish to delete.
+To add a vertex, hold down alt and then drag a new point from the line in which you want to insert the point.
+
+
+========================
+ 3. Troubleshooting tips
+========================
+
+Remember the first thing you need to do is drag the LPManager prefab into your scene!
+
+If the simulation is not running in unity and you are getting lots of errors try putting the liquidfun.dll
+ into the projects root folder. Also put liquidfun.dll in your built game root directory.
+
+We would advise not using chain-shapes (edges) if the shape in question will interact with many particles,
+this causes odd behaviour and generally performs very badly. Use a polygon shape instead.
+
+Also chain-shapes have 0 area and therefore 0 mass so can have unpredictable results interacting with
+ joints also, add a circle fixture, for example, and set it to be a sensor to give your body mass
+
+Don't make fixtures too small or skinny. If vertices are too close to one another the simulation will
+ merge them into one and may make you shapes invalid
+
+Remember the scale of physics simulation in unity in 1:1 So something 10 units across in unity is
+ 10 metres across in the simulation. For more realistic behaviour try and make your simulation the
+ correct real-world size.
+Here is a quote from the box2D documentation on the subject "Box2D has been tuned to work well
+ with moving objects between 0.1 and 10 meters. So this means objects between soup cans and
+ buses in size should work well. Static objects may be up to 50 meters big without too much trouble."
+
+Depending on your game you may want to adjust the particle system gravity scale, particle system
+ particle size and the number of particle iterations to achieve your desired behaviour and particle
+ system performance
+ 
+We recommend using the latest version of unity editor (at time of release version 4.5.4)
+Tested on versions as as old as 4.5.0.
+
+
+========================
+ 4. Performance tips
+========================
+
+The obvious best way to increase performance is to design your game and graphics to use less particles
+(ie. bigger particles)
+
+If particles from two areas will never interact in your game then put them in two separate particle systems.
+
+To increase particle performance (at the cost of simulation accuracy) reduce the number of particle
+ iterations (in the LPManager component)
+
+The collision listener provides comprehensive and fully accurate data but using it is expensive
+ performance wise, *especially* for particle-particle collisions.
+
+Have less particle flags set (in the particle materials and particle group materials)
+
+More extreme particle behaviour (ie. very large forces) with more particles = worse performance
+
+Have less bodies in your simulation
+
+Allow bodies to sleep
+
+Performance on built versions should be quite a bit better than in the editor as the OnDrawGizmos()
+methods are quite expensive in the unity helper classes
+
+
+========================
+ 5. Support policy
+========================
+
+The plugin is still under continued development by our team and we have people dedicated to
+ providing help and support to you. Please also let us know what you like/dislike about the plugin
+ and how you think we can improve it.
+
+Note: Expect frequent updates and fixes over the coming weeks and months
+
+Support / new features request priority
+1. Plugin not working on supported platform.
+2. Crashes on supported platform.
+3. Request for C++ function to be added or exposed
+ (if you can point out the specific function in the LiquidFun documentation and describe how it
+ should work etc. you will be given preference)
+4. More unity helper classes / features
+
+
+========================
+  Version 1.6 Changes
+========================
+
+- The plugin now works in the editor when the platform is set to iOS. No longer need to keep switching platforms back and forth.
+- Fixed a bug where the bodys were all assigned an index of 0, causing a variety of bugs when trying to access bodies by index.
+- World querying now uses a bodys index instead of a pointer so that it is consistant with the rest of LP2D.
+	- WorldTestPointForBody() now returns an index into the allBodies dictionary in the LPManager.
+- Fixed a memory leak in the ray caster in the c++ plugin.
+- Fixed some unnessessary allocation/garbage collection in the ParticleSystem class. The particles arrays are no longer re-created each frame.
+- Joints do not have to be spawned on play now. Can be setup in the editor but initialised at a later stage.
+- Fixed a bug where deleting a weld joint caused Unity to crash because the ThingPtr was never set for the joint.
+- New menu option to remove all unity colliders from a scene.(Use to optimise out unnessessary unity physics calculations.)
+
+========================
+  Version 1.5 Changes
+========================
+API functions added to c++ backend : 
+	- int32 BodyTestPoint(void* bodyPointer, float32 x, float32 y); //1 = true, point inside body. 0 = false point outside body
+	- void* WorldTestPointForBody(void* worldPointer, float32 x, float32 y); //returns IntPtr to the first body that the point is inside
+	- GetParticlesInShape() now uses Box2D region querying which is more efficient, especially for larger scenes.
+
+Rounded corner shapes editor updates :
+	- Undo features added.
+	- More responsive in the editor.
+
+Two new testbed scenes added :
+	- Scene where bodies can be selected with the mouse and dragged around.This scene demos the new API functions.
+	- Scene with refraction based water effect. This scene is a proof of concept. It is not exactly game ready but it demonstrates how you can create and use a normal map for the liquid.
+
+========================
+  Version 1.4 Changes
+========================
+Windows phone 8.1 is now supported.
+
+========================
+  Version 1.3 Changes
+========================
+Major iOS improvements.
+    - iOS deployment vastly improved and simplified.
+    - Fixed crashing/performance issues with iOS x64.
+       -iPhone 5 - 6000 particles
+       -iPhone 6 - 10000 particles
+       -iPhone 4 - 1000 particles (remember even 1000 particles is a hell of a lot!)
+    - Added an option to use Unity's fixed time step value for the particle system.
+    - Re-enabled SurfaceTensionNormalStrength,SurfaceTensionPressureStrength,ViscousStrength.
+    - Added API functions to split and join groups.(useful for elastic/spring groups)
+    - LPPartcileSystem can now query the world for particle groups.
+    - Added API function to get the centroid of group of particles.
+    - Check out ExampleScenes/splitParticleGroup.unity
+
+========================
+  Version 1.2 Changes
+========================
+
+Unity 2d physics Converter.
+      -Convert all Unity 2d physics bodies and fixtures into LP2D ones at the click of a button.
+
+Android X86 support
+
+========================
+  Version 1.1 Changes
+========================
+
+======= Major additions
+
+Testbed scenes 
+    16 graphical scenes with much nicer rendering of particles
+	14 of which are optimized for mobile and included in the testbed app for Android.
+		
+New Particle Drawers 
+	3 new much more realistic looking particle visualizing/drawing scripts.
+
+Metaball Shader 
+	For pro users. Metaball shader and example scene (note: some testbed scenes use the metaball shder)
+	
+	
+======= Other additions
+
+Maximum particles field added to LPParticleSystem
+
+Collision group index field added to LPFixture
+
+Support for creating polygonal fixtures and particle groups programmatically 
+	Example scene included
+	
+Support for changing a polygon shape at runtime
+	Example scene included
+	
+Support for, setting up fixtures in editor, setting SpawnOnPlay to false, and initialising later while simulation is running 
+	Example scene included
+	
+Oil and Water example scenes (expensive and cheap options)
+
+LPPrefabSpawner prefab 
+	prefab that will instantiate and initialise other prefabs with LPBody components
+	
+Particle counter prefab
+	
+	
+======= Fixes
+
+GroupIndex parameter in LPAPIFixture.SetFixtureFilterData changed from uint16 to int16
+
+Joint custom gizmo graphics now display on OSX
+
+Joint gizmos more accurate for rotated or moving bodies
+
+
